@@ -30,3 +30,9 @@ do
     done
 done
 ```
+
+## Human evaluation
+The results of the human evaluation can be seen in the `attack_results` folder. The file `attack_results_summary` contains the result of the human evaluation.
+
+## Classifiers modifiability
+Classifiers selected for our SPE method can be modified according to the user needs. If the user wants to have a better performance in e.g. tweet domain he can add more fasttext or other classifiers to the `classifiers_fasttext` folder, which are trained on a suitable task. This will result in even bettter performance.
