@@ -1,0 +1,25 @@
+,name,successful >= 2.5,successful > 2.5,original success,mean
+0,output_hate_SPETFAdjusted_97_labeled.csv,88,88,97,3.2144329896907218
+1,output_hate_SPETextFooler_100_labeled.csv,70,70,100,2.7739999999999996
+2,output_hate_TextFoolerJin2019AdjustedUSE_23_labeled.csv,22,22,23,3.3739130434782614
+3,output_hate_TextFoolerJin2019Adjusted_51_labeled.csv,51,51,51,3.4823529411764707
+4,output_hate_TextFoolerJin2019BERT_100_labeled.csv,57,57,100,2.628
+5,output_hate_TextFoolerJin2019_100_labeled.csv,39,39,100,2.38
+6,output_offensive_SPETFAdjusted_100_labeled.csv,78,78,100,3.068
+7,output_offensive_SPETextFooler_100_labeled.csv,45,45,100,2.4019999999999997
+8,output_offensive_TextFoolerJin2019AdjustedUSE_9_labeled.csv,9,9,9,3.5833333333333335
+9,output_offensive_TextFoolerJin2019Adjusted_47_labeled.csv,47,44,47,3.50531914893617
+10,output_offensive_TextFoolerJin2019BERT_100_labeled.csv,29,29,100,2.094
+11,output_offensive_TextFoolerJin2019_100_labeled.csv,27,27,100,2.0260000000000002
+12,output_rotten_SPETFAdjusted_100_labeled.csv,94,94,100,3.1279999999999997
+13,output_rotten_SPETextFooler_100_labeled.csv,69,69,100,2.728
+14,output_rotten_TextFoolerJin2019AdjustedUSE_3_labeled.csv,3,3,3,3.1999999999999997
+15,output_rotten_TextFoolerJin2019Adjusted_57_labeled.csv,51,51,57,3.0280701754385966
+16,output_rotten_TextFoolerJin2019BERT_100_labeled.csv,42,42,100,2.38
+17,output_rotten_TextFoolerJin2019_100_labeled.csv,43,23,100,2.2775
+18,output_yelp_SPETFAdjusted_81_labeled.csv,44,44,81,2.577777777777778
+19,output_yelp_SPETextFooler_100_labeled.csv,42,42,100,2.414
+20,output_yelp_TextFoolerJin2019AdjustedUSE_3_labeled.csv,3,3,3,3.6666666666666665
+21,output_yelp_TextFoolerJin2019Adjusted_23_labeled.csv,15,15,23,2.817391304347826
+22,output_yelp_TextFoolerJin2019BERT_100_labeled.csv,8,2,100,1.88
+23,output_yelp_TextFoolerJin2019_100_labeled.csv,8,8,100,1.9980000000000002

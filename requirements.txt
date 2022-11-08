@@ -1,0 +1,7 @@
+jupyter
+fasttext
+scipy
+tensorflow-hub
+pandas
+datasets
+textattack
