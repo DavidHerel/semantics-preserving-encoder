@@ -21,8 +21,7 @@ python run_attacks.py --help
 To run all experiments at once and write the output to log files do:
 
 ``` sh
-for attack in  TextFooler TFAdjusted TextFoolerBERT TFAdjusted USE SPE  SPEAdjusted
- Genetic CLARE SPECLARE
+for attack in  TextFooler  TextFoolerSPE TextFoolerBERT TFAdjusted TFAdjustedUSE SPEAdjusted
 do
     for task in hate offensive imdb yelp rotten
     do
