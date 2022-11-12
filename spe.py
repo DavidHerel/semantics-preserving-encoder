@@ -74,7 +74,9 @@ def spe(input_sentences, vector_dimension = 10):
 
 
 if __name__ == '__main__':
-    input_sentences = ["bla bla", "test"]
+    input_sentences = [
+    "The quick brown fox jumps over the lazy dog.",
+    "I am a sentence for which I would like to get its embedding"]
     output = spe(input_sentences, 10)
     print("SPE output:")
     print(output)
