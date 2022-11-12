@@ -42,4 +42,4 @@ Please cite the [arXiv paper](https://arxiv.org/abs/2211.04205) if you use Seman
 ```
 
 ## License
-ParlAI is MIT licensed. See the **[LICENSE]([https://github.com/facebookresearch/ParlAI/blob/main/LICENSE](https://github.com/DavidHerel/semantics-preserving-encoder/blob/main/license.txt))** file for details.
+ParlAI is MIT licensed. See the **[license.txt]([[https://github.com/facebookresearch/ParlAI/blob/main/LICENSE](https://github.com/DavidHerel/semantics-preserving-encoder/blob/main/license.txt)])** file for details.
