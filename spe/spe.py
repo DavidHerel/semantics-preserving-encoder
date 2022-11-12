@@ -6,6 +6,10 @@ import numpy as np
 from fasttext.FastText import _FastText
 
 
+class ClassifierNotFound(Exception):
+    pass
+
+
 def spe_sentence(
     input_sentence: Sequence[str],
     classifiers: Sequence[_FastText],
@@ -57,7 +61,7 @@ def load_classifiers() -> List[_FastText]:
     ]
 
     if len(classifier_files) == 0:
-        raise Exception(
+        raise ClassifierNotFound(
             "ERROR: There were not fasttext classifiers located in the classifiers folder"
         )
 
