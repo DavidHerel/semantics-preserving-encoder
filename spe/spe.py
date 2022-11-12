@@ -1,10 +1,16 @@
 import os
+from typing import List, Sequence
 
 import fasttext
 import numpy as np
+from fasttext import _FastText
 
 
-def spe_sentence(input_sentence, classifiers, vector_dimension):
+def spe_sentence(
+    input_sentence: Sequence[str],
+    classifiers: Sequence[_FastText],
+    vector_dimension: int,
+) -> np.ndarray:
     """
     Processes the input sentence for each classifier into an averaged vector
     of given dimensions. This process is described in detail in paper
@@ -34,7 +40,7 @@ def spe_sentence(input_sentence, classifiers, vector_dimension):
     return final_average_vector
 
 
-def load_classifiers():
+def load_classifiers() -> List[_FastText]:
     """
     Loads all the fastText classifiers that are in classifiers_folder_path.
 
@@ -71,7 +77,7 @@ def load_classifiers():
     return classifiers
 
 
-def spe(input_sentences, vector_dimension=10):
+def spe(input_sentences: Sequence[str], vector_dimension: int = 10) -> List[np.ndarray]:
     """
     Processes the list of input sentences into a corresponding array of vectors.
 
