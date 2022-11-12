@@ -1,4 +1,9 @@
 from setuptools import setup, find_packages
+import sys
+
+with open('README.md', encoding="utf8") as f:
+    # strip the header and badges etc
+    readme = f.read().split('--------------------')[-1]
 
 setup(
     name="spe-encoder",
