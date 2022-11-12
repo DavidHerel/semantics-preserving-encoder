@@ -2,9 +2,6 @@ import numpy as np
 import fasttext
 import os
 
-# TODO edge cases - does not throw
-
-
 def spe_sentence(input_sentence, classifiers, vector_dimension):
     """
     Processes the input sentence for each classifier into an averaged vector of given dimensions.
@@ -15,6 +12,11 @@ def spe_sentence(input_sentence, classifiers, vector_dimension):
     :param vector_dimension: dimension of the averaged output vector as int
     :return: averaged output vector for given sentence
     """
+
+    max_vector_size = min([len(i.get_sentence_vector("Test")) for i in classifiers])
+    if vector_dimension > max_vector_size:
+        raise Exception("ERROR: Vector dimension is higher than the model dimension, which is: " + str(max_vector_size))
+
     averaged_vector_arr = np.zeros(shape=(len(classifiers), vector_dimension))
     # get all vectors from classifiers and put them in an array
     for i, model in enumerate(classifiers):
@@ -32,9 +34,14 @@ def load_classifiers():
     :return: list of loaded fastText classifiers
     """
     classifiers_folder_path = "classifiers"
+
     classifiers = []
     classifier_files = [f for f in os.listdir(classifiers_folder_path) if
                         os.path.isfile(os.path.join(classifiers_folder_path, f)) and f.endswith(".ftz")]
+
+    if len(classifier_files) == 0:
+        raise Exception("ERROR: There were not fasttext classifiers located in the classifiers folder")
+
     try:
         # silence the deprecation warnings as the package does not properly use the python 'warnings' package
         # see https://github.com/facebookresearch/fastText/issues/1056
@@ -68,6 +75,6 @@ def spe(input_sentences, vector_dimension = 10):
 
 if __name__ == '__main__':
     input_sentences = ["bla bla", "test"]
-    output = spe(input_sentences)
+    output = spe(input_sentences, 10)
     print("SPE output:")
     print(output)
