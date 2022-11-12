@@ -2,9 +2,6 @@ import numpy as np
 import fasttext
 import os
 
-import sys, os
-# sys.path.append(os.path.join(os.path.dirname(__file__), '.', 'classifiers'))
-
 def spe_sentence(input_sentence, classifiers, vector_dimension):
     """
     Processes the input sentence for each classifier into an averaged vector of given dimensions.
