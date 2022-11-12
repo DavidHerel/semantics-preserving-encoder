@@ -23,7 +23,7 @@ You can utilise the default classifiers specified in paper [Semantics Preserving
 
 You can also define your own vector dimension for the output vectors through an optional second parameter of 'spe' method. Otherwise, 10 is used as a default value.
 ``` sh
-my_vector_dimensions = 20
+my_vector_dimensions = 5
 output_vectors = spe(input_sentences, my_vector_dimensions)
 ```
 
