@@ -1,3 +1,6 @@
+"""
+The Semantics Preserving Encoder source code.
+"""
 import os
 from typing import List, Sequence
 
@@ -27,7 +30,7 @@ def spe_sentence(
 
     """
 
-    max_vector_size = min([len(i.get_sentence_vector("Test")) for i in classifiers])
+    max_vector_size = min(len(i.get_sentence_vector("Test")) for i in classifiers)
     if vector_dimension > max_vector_size:
         raise Exception(
             "ERROR: Vector dimension is higher than the model dimension, which is: "
@@ -62,7 +65,8 @@ def load_classifiers() -> List[_FastText]:
 
     if len(classifier_files) == 0:
         raise ClassifierNotFound(
-            "ERROR: There were not fasttext classifiers located in the classifiers folder"
+            "ERROR: There were not fasttext classifiers located in the classifiers"
+            " folder"
         )
 
     try:
