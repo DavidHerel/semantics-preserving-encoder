@@ -10,7 +10,7 @@ pip install spe-encoder
 ## Usage
 This package is easy to use or integrate into any Python project as follows:
 ``` sh
-from spe-encoder import spe
+from spe import spe
 
 input_sentences = input_sentences = [
     "The quick brown fox jumps over the lazy dog.",
