@@ -1,1 +1,1 @@
-import spe
+from .spe import spe
