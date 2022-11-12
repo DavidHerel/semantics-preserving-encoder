@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="spencoder",
+    name="spe-encoder",
     version="0.0.1",
     author="David Herel, Hugo Cisneros, Daniela Hradilova, Tomas Mikolov",
     description="Sentence embedding technique for textual adversarial attacks",
