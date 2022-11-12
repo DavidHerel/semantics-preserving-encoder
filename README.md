@@ -4,13 +4,13 @@
 ## Setup
 You should be able to run this package with Python 3.6+. To use Semantics Preserving Encoder simply run pip with command:
 ``` sh
-pip install spe
+pip install spe-encoder
 ```
 
 ## Usage
 This package is easy to use or integrate into any Python project as follows:
 ``` sh
-from spe import spe
+from spe-encoder import spe
 
 input_sentences = input_sentences = [
     "The quick brown fox jumps over the lazy dog.",
