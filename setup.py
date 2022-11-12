@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setuptools.setup(
+setup(
     name="spe",
     version="0.0.1",
     author="David Herel, Hugo Cisneros, Daniela Hradilova, Tomas Mikolov",
