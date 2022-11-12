@@ -2,6 +2,9 @@ import numpy as np
 import fasttext
 import os
 
+import sys, os
+# sys.path.append(os.path.join(os.path.dirname(__file__), '.', 'classifiers'))
+
 def spe_sentence(input_sentence, classifiers, vector_dimension):
     """
     Processes the input sentence for each classifier into an averaged vector of given dimensions.
@@ -33,7 +36,7 @@ def load_classifiers():
 
     :return: list of loaded fastText classifiers
     """
-    classifiers_folder_path = "classifiers"
+    classifiers_folder_path = os.path.join(os.path.dirname(__file__), 'classifiers')
 
     classifiers = []
     classifier_files = [f for f in os.listdir(classifiers_folder_path) if
@@ -49,7 +52,7 @@ def load_classifiers():
 
         for name in classifier_files:
             classifiers.append(
-                fasttext.load_model(classifiers_folder_path + "/" + name)
+                fasttext.load_model(os.path.join(classifiers_folder_path, name))
             )
     except:
         pass
