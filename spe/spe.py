@@ -3,7 +3,7 @@ from typing import List, Sequence
 
 import fasttext
 import numpy as np
-from fasttext import _FastText
+from fasttext.FastText import _FastText
 
 
 def spe_sentence(
@@ -71,7 +71,7 @@ def load_classifiers() -> List[_FastText]:
             classifiers.append(
                 fasttext.load_model(os.path.join(classifiers_folder_path, name))
             )
-    except:
+    except Exception as _:
         pass
 
     return classifiers
