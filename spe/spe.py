@@ -21,7 +21,7 @@ def spe_sentence(input_sentence, classifiers, vector_dimension):
     # get all vectors from classifiers and put them in an array
     for i, model in enumerate(classifiers):
         sentence_vector = model.get_sentence_vector(input_sentence)
-        averaged_vector_arr[i] = sentence_vector
+        averaged_vector_arr[i] = sentence_vector[:vector_dimension]
 
     final_average_vector = averaged_vector_arr.mean(axis=0)
     return final_average_vector
