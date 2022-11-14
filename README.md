@@ -19,7 +19,7 @@ input_sentences = input_sentences = [
 output_vectors = spe(input_sentences)
 ```
 ### Possible modifications
-You can utilise the default classifiers specified in paper [Semantics Preserving Encoder](https://arxiv.org/abs/2211.04205) or extend/ replace with your own classifiers by placing them in the "classifiers" project folder. The script will auto detect these changes. *Note*: Currently, only fastText classifiers are supported.
+You can utilise the default classifiers specified in paper [Semantics Preserving Encoder](https://arxiv.org/abs/2211.04205) or extend/ replace with your own classifiers by placing them in the "spe_classifiers" folder, which is automatically created. The script will auto detect these changes. *Note*: Currently, only fastText classifiers are supported.
 
 You can also define your own vector dimension for the output vectors through an optional second parameter of 'spe' method. Otherwise, 10 is used as a default value.
 ``` sh
