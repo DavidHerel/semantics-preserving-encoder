@@ -2,11 +2,14 @@
 The Semantics Preserving Encoder source code.
 """
 import os
+import pathlib
 from typing import List, Sequence
 
 import fasttext
 import numpy as np
 from fasttext.FastText import _FastText
+
+from utils import download_default_classifiers
 
 
 class ClassifierNotFound(Exception):
@@ -53,7 +56,16 @@ def load_classifiers() -> List[_FastText]:
 
     :return: list of loaded fastText classifiers
     """
-    classifiers_folder_path = os.path.join(os.path.dirname(__file__), 'classifiers')
+    classifiers_folder_path = pathlib.Path("./classifiers")
+
+    if (
+        not classifiers_folder_path.exists()
+        or len(list(classifiers_folder_path.glob("*.ftz"))) == 0
+    ):
+        print("No classifiers found.")
+        classifiers_folder_path.mkdir(exist_ok=True)
+        # This tries to download the default classifiers zip archive.
+        download_default_classifiers()
 
     classifiers = []
     classifier_files = [
@@ -63,6 +75,7 @@ def load_classifiers() -> List[_FastText]:
         and f.endswith(".ftz")
     ]
 
+    # If we failed to download default classifiers raise a classifier not found error.
     if len(classifier_files) == 0:
         raise ClassifierNotFound(
             "ERROR: There were not fasttext classifiers located in the classifiers"
