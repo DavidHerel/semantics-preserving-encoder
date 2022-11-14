@@ -9,7 +9,7 @@ import fasttext
 import numpy as np
 from fasttext.FastText import _FastText
 
-from utils import download_default_classifiers
+from spe.utils import download_default_classifiers
 
 
 class ClassifierNotFound(Exception):
