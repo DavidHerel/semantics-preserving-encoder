@@ -56,7 +56,7 @@ def load_classifiers() -> List[_FastText]:
 
     :return: list of loaded fastText classifiers
     """
-    classifiers_folder_path = pathlib.Path("./classifiers")
+    classifiers_folder_path = pathlib.Path("./spe_classifiers")
 
     if (
         not classifiers_folder_path.exists()

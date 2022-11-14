@@ -7,7 +7,7 @@ import zipfile
 default_classifiers_url = "https://data.ciirc.cvut.cz/public/projects/2022PreservingSemanticsEncoder/default_classifiers.zip"
 
 
-def download_default_classifiers(extract_to=pathlib.Path("./classifiers")):
+def download_default_classifiers(extract_to=pathlib.Path("./spe_classifiers")):
     print("Downloading default classifiers.")
     try:
         with urllib.request.urlopen(
