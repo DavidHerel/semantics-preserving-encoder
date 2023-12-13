@@ -29,7 +29,7 @@ output_vectors = spe(input_sentences, my_vector_dimensions)
 
 ## Citation
 
-Please cite the [arXiv paper](https://arxiv.org/abs/2211.04205) if you use SemanticsPreservingEncoder in your work:
+Please cite the [ECAI paper](https://arxiv.org/abs/2211.04205) if you use SemanticsPreservingEncoder in your work:
 
 ```bibtex
 @article{herel2022preserving,
